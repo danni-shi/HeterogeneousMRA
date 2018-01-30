@@ -18,5 +18,5 @@ Go to folder XP to generate figures from the paper.
 
 Requirements:
 
- # Manopt 4.0 or later, available at http://www.manopt.org (necessary)
+	Manopt 4.0 or later, available at http://www.manopt.org (necessary)
  
