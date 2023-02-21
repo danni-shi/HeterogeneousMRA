@@ -1,4 +1,4 @@
-function [X, shifts] = generate_observations(x, M, sigma, noisetype)
+function [X, shifts] = generate_observations(x, M, sigma, shift, noisetype)
 % Given a signal x of length N, generates a matrix X of size N x M such
 % that each column of X is a randomly, circularly shifted version of x with
 % i.i.d. Gaussian noise of variance sigma^2 added on top. If x is complex,
@@ -18,12 +18,21 @@ function [X, shifts] = generate_observations(x, M, sigma, noisetype)
     x = x(:);
     N = length(x);
     
-    X = zeros(N, M);
-    shifts = randi(N, M, 1) - 1;
-    for m = 1 : M
-        X(:, m) = circshift(x, shifts(m));
+    X = randn(N, M);
+
+    if shift == -1
+
+        shifts = randi(N, M, 1) - 1;
+        for m = 1 : M
+            X(:, m) = circshift(x, shifts(m));
+        end
+    else
+        shifts = randi(max(1, round(shift*N)), M, 1) - 1;
+        for m = 1 : M
+            X(shifts(m)+1:end, m) = x(1:end-shifts(m));
+        end
     end
-    
+
     if ~exist('noisetype', 'var') || isempty(noisetype)
         noisetype = 'Gaussian';
     end

@@ -1,4 +1,4 @@
-function [data, shifts, classes] = generate_observations_het(x_true, Ms, sigma)
+function [data, shifts, classes] = generate_observations_het(x_true, Ms, sigma, shift)
 % Generate MRA observations with heterogeneity.
 % x_true is a matrix of size N x K, containing the K true signals of length N
 % Ms is a vector of integers of length K
@@ -18,7 +18,7 @@ function [data, shifts, classes] = generate_observations_het(x_true, Ms, sigma)
     classes = zeros(sumMs, 1);
     for k = 1 : K
         range = (cumsumMs(k) + 1) : cumsumMs(k+1);
-        [data(:, range), shifts(range)] = generate_observations(x_true(:, k), Ms(k), sigma);
+        [data(:, range), shifts(range)] = generate_observations(x_true(:, k), Ms(k), sigma, shift);
         classes(range) = k;
     end
 

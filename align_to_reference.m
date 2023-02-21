@@ -1,4 +1,4 @@
-function x_aligned = align_to_reference(x, xref)
+function [ind, x_aligned] = align_to_reference(x, xref)
 % Given two column vectors x and xref, returns x after circularly shifting
 % it such that it is optimally aligned with xref in 2-norm.
 %
