@@ -1,3 +1,5 @@
+% ignore files
+% https://git-scm.com/docs/gitignore
 data/
 *.csv
 *.asv
