@@ -1,4 +1,7 @@
+data/
+*.csv
 *.asv
+test*
 *.synctex.gz
 *.log
 *.blg

@@ -27,7 +27,7 @@ function [X, shifts] = generate_observations(x, M, sigma, shift, noisetype)
             X(:, m) = circshift(x, shifts(m));
         end
     else
-        shifts = randi(max(1, round(shift*N)), M, 1) - 1;
+        shifts = randi(max(1, shift)+1, M, 1) - 1;
         for m = 1 : M
             X(shifts(m)+1:end, m) = x(1:end-shifts(m));
         end

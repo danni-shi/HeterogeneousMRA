@@ -2,61 +2,62 @@ clear all; %#ok<CLALL>
 close all;
 clc;
 
+rng(42);
+save_data = true;
+
 %% Problem setup
-
+M = 500;
 L = 100; % signal length
-K = 2;  % number of different signals to estimate (heterogeneity)
+signal = 'pvCLCL';
+max_shift = 2; % shift set to -1 to enable cyclic shifts
+nextrainits = 2;
+train_ratio = 0.5;
+num_rounds = 4;
+sigma_scale = 1;
+% K = 3;  % number of different signals to estimate (heterogeneity)
+% sigma = 0.5;
+% sigma_scale = 1.5;
+% run(M, L, K, sigma, max_shift, signal, nextrainits, save_data,[],sigma_scale);
 
-% Ground truth signals
-% x_true = transpose(linspace(-1,1,L));
-x_true = transpose(sin(linspace(0,2*pi,L)));
-% x_true(11:20) = transpose(sin(linspace(0,4*pi,10)));
-% x_true(end-9:end) = transpose(sin(linspace(0,4*pi,10)));
-x_true = normalize(x_true);
-
-% Ground truth mixing probabilities
-p_true = rand(K, 1);
-p_true = max(.2*(1/K), p_true);
-p_true = p_true / sum(p_true);
-% Number of measurements for each class
-M = 1e5;
-Ms = round(p_true*M);
-
-% Noise level
-sigma = 0.1;
-shift = -1; % shift set to -1 to enable cyclic shifts
-% Generate the data
-data = generate_observations_het(x_true, Ms, sigma, shift);
-
-
-%% Optimization
-
-opts = struct();
-opts.maxiter = 200;
-opts.tolgradnorm = 1e-7;
-opts.tolcost = 1e-18;
-
-% initial point
-X0 = zeros(L,1);
-p0 = ones(K, 1) / K;
-
-[x_est, p_est, problem] = MRA_het_mixed_invariants_free_p(data, sigma, K, [], [], opts);
-
-%% Evaluate quality of recovery, up to permutations and shifts.
-
-[ind, x_est, ~, perm] = align_to_reference_het(x_est, x_true);
-p_est = p_est(perm);
-
-rel_error_X = norm(x_est - x_true) / norm(x_true);
-tv_error_p = norm(p_est - p_true, 1) / 2;
-
-
-%% Plot
-d1 = floor(sqrt(K));
-d2 = ceil(K/d1);
-for k = 1 : K
-    subplot(d1, d2, k);
-    plot(1:L, x_true(:, k), '.-', 1:L, x_est(:, k), 'o-');
-    legend('True signal', 'Estimate');
-    title(sprintf('True weight: %.3g; estimated: %.3g, Relative Error: %.3g, Lag: %i', p_true(k), p_est(k), rel_error_X(k), ind(k)));
+if save_data == true    
+      % create folder to store the data
+    folder_name = sprintf('../data/data%i_shift%.3g_%s_init%i_set1',M,max_shift,signal,nextrainits);
+    if exist(folder_name, 'dir')
+        rmdir(folder_name,'s');
+    end
+    mkdir(folder_name);
 end
+
+
+for round = 1:num_rounds
+    if save_data == true    
+       % create folder to store the data
+       subfolder_name = strcat(folder_name,sprintf('/%i',round));
+       mkdir(subfolder_name);
+    end
+
+    for K = 2:2
+        % generate observations at different noise level for the same
+        % latent signal of shape LxK
+        [x_true, SPY] = generate_signal(K,L,signal);
+        for sigma = 0.1:0.1:2.0
+            fprintf('K = %i, sigma = %.3g \n', K, sigma)
+            run(x_true, SPY, M, L, K, sigma, max_shift, nextrainits, save_data, subfolder_name,sigma_scale,train_ratio)
+        end
+    end
+end
+
+% generate data at different noise level and different number of classes
+%  diary log500_50_init3_nonPeriodicSine.txt
+
+
+
+% diary off
+
+% L = 50; % signal length
+% K = 1;  % number of different signals to estimate (heterogeneity)
+% signal = 'gaussian';
+% sigma = 1;
+% max_shift = 0.1; % shift set to -1 to enable cyclic shifts
+% 
+% run(L, K, sigma, max_shift, signal, save_data);

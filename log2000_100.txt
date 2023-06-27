@@ -1,0 +1,217 @@
+2 failures to converge:
+K = 3: sigma = 0.3
+K = 4: sigma = 1.7
+
+K = 2, sigma = 0.1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.164795 [s] (excludes statsfun)
+K = 2, sigma = 0.2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.866438 [s] (excludes statsfun)
+K = 2, sigma = 0.3 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.674224 [s] (excludes statsfun)
+K = 2, sigma = 0.4 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.042383 [s] (excludes statsfun)
+K = 2, sigma = 0.5 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.044330 [s] (excludes statsfun)
+K = 2, sigma = 0.6 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.593429 [s] (excludes statsfun)
+K = 2, sigma = 0.7 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 14.2291 and options.Delta0 = 1.77864.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.774862 [s] (excludes statsfun)
+K = 2, sigma = 0.8 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.736997 [s] (excludes statsfun)
+K = 2, sigma = 0.9 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.606127 [s] (excludes statsfun)
+K = 2, sigma = 1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.736244 [s] (excludes statsfun)
+K = 2, sigma = 1.1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.066765 [s] (excludes statsfun)
+K = 2, sigma = 1.2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.437267 [s] (excludes statsfun)
+K = 2, sigma = 1.3 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.965528 [s] (excludes statsfun)
+K = 2, sigma = 1.4 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.594361 [s] (excludes statsfun)
+K = 2, sigma = 1.5 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.497764 [s] (excludes statsfun)
+K = 2, sigma = 1.6 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.876406 [s] (excludes statsfun)
+K = 2, sigma = 1.7 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.922419 [s] (excludes statsfun)
+K = 2, sigma = 1.8 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.800249 [s] (excludes statsfun)
+K = 2, sigma = 1.9 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 0.636298 [s] (excludes statsfun)
+K = 2, sigma = 2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.224790 [s] (excludes statsfun)
+K = 3, sigma = 0.1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.662710 [s] (excludes statsfun)
+K = 3, sigma = 0.2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.034761 [s] (excludes statsfun)
+K = 3, sigma = 0.3 
+Max iteration count reached; options.maxiter = 200.
+Total time is 1.811252 [s] (excludes statsfun)
+K = 3, sigma = 0.4 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.894851 [s] (excludes statsfun)
+K = 3, sigma = 0.5 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.938732 [s] (excludes statsfun)
+K = 3, sigma = 0.6 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.404767 [s] (excludes statsfun)
+K = 3, sigma = 0.7 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.263980 [s] (excludes statsfun)
+K = 3, sigma = 0.8 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.528795 [s] (excludes statsfun)
+K = 3, sigma = 0.9 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.890360 [s] (excludes statsfun)
+K = 3, sigma = 1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.619050 [s] (excludes statsfun)
+K = 3, sigma = 1.1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.928850 [s] (excludes statsfun)
+K = 3, sigma = 1.2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.570777 [s] (excludes statsfun)
+K = 3, sigma = 1.3 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 17.3916 and options.Delta0 = 2.17395.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.782601 [s] (excludes statsfun)
+K = 3, sigma = 1.4 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 17.3916 and options.Delta0 = 2.17395.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.311767 [s] (excludes statsfun)
+K = 3, sigma = 1.5 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.481006 [s] (excludes statsfun)
+K = 3, sigma = 1.6 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 17.3916 and options.Delta0 = 2.17395.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.656102 [s] (excludes statsfun)
+K = 3, sigma = 1.7 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.883905 [s] (excludes statsfun)
+K = 3, sigma = 1.8 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 17.3916 and options.Delta0 = 2.17395.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.355346 [s] (excludes statsfun)
+K = 3, sigma = 1.9 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 17.3916 and options.Delta0 = 2.17395.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.382489 [s] (excludes statsfun)
+K = 3, sigma = 2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 1.735085 [s] (excludes statsfun)
+K = 4, sigma = 0.1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.991592 [s] (excludes statsfun)
+K = 4, sigma = 0.2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.537668 [s] (excludes statsfun)
+K = 4, sigma = 0.3 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 4.187402 [s] (excludes statsfun)
+K = 4, sigma = 0.4 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.336992 [s] (excludes statsfun)
+K = 4, sigma = 0.5 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.955053 [s] (excludes statsfun)
+K = 4, sigma = 0.6 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.925697 [s] (excludes statsfun)
+K = 4, sigma = 0.7 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 4.260520 [s] (excludes statsfun)
+K = 4, sigma = 0.8 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.727399 [s] (excludes statsfun)
+K = 4, sigma = 0.9 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 20.0616 and options.Delta0 = 2.5077.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.657608 [s] (excludes statsfun)
+K = 4, sigma = 1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.804502 [s] (excludes statsfun)
+K = 4, sigma = 1.1 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 4.650054 [s] (excludes statsfun)
+K = 4, sigma = 1.2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 5.279110 [s] (excludes statsfun)
+K = 4, sigma = 1.3 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 20.0616 and options.Delta0 = 2.5077.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.764867 [s] (excludes statsfun)
+K = 4, sigma = 1.4 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 3.428370 [s] (excludes statsfun)
+K = 4, sigma = 1.5 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 20.0616 and options.Delta0 = 2.5077.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 4.264100 [s] (excludes statsfun)
+K = 4, sigma = 1.6 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 20.0616 and options.Delta0 = 2.5077.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 4.756464 [s] (excludes statsfun)
+K = 4, sigma = 1.7 
+Max iteration count reached; options.maxiter = 200.
+Total time is 2.481458 [s] (excludes statsfun)
+K = 4, sigma = 1.8 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 2.823937 [s] (excludes statsfun)
+K = 4, sigma = 1.9 
+ +++ Detected many consecutive TR+ (radius increases).
+ +++ Consider multiplying options.Delta_bar by 10.
+ +++ Current values: options.Delta_bar = 20.0616 and options.Delta0 = 2.5077.
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 6.706617 [s] (excludes statsfun)
+K = 4, sigma = 2 
+Gradient norm tolerance reached; options.tolgradnorm = 1e-07.
+Total time is 4.731689 [s] (excludes statsfun)
