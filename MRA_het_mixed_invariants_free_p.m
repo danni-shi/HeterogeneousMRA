@@ -40,17 +40,21 @@ function [X, p, problem] = MRA_het_mixed_invariants_free_p(data, sigma, K, X0, p
     warning('off', 'manopt:getHessian:approx');
     
     % Run once with the given initialization (could be random)
-    [XP_est, cost] = trustregions(problem, XP0, opts);
+    [XP_est, cost, info] = trustregions(problem, XP0, opts);
+    
     
     % Also run an extra number of random inits and keep the best result.
     for init = 1 : nextrainits
-        [XP_est_bis, cost_bis] = trustregions(problem, [], opts);
-        if cost_bis < cost
-            XP_est = XP_est_bis;
-            cost = cost_bis;
+        % only rerun if previous round ends at maximum iteration
+        iter_list = [info.iter];
+        if length(iter_list) > opts.maxiter
+            [XP_est_bis, cost_bis, info] = trustregions(problem, [], opts);
+            if cost_bis < cost
+                XP_est = XP_est_bis;
+                cost = cost_bis;
+            end
         end
     end
-    
     warning('on', 'manopt:getHessian:approx');
     
     X = XP_est.X;
